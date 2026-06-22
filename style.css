@@ -1124,6 +1124,13 @@ select.form-input {
     transition: var(--transition-smooth);
 }
 
+.social-link svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    transition: var(--transition-smooth);
+}
+
 .social-link:hover {
     background-color: var(--color-gold);
     color: var(--color-black);
