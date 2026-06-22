@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurelia | Elegant Fine Dining Restaurant</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Indulge in a premium culinary journey at Aurelia, offering fresh organic ingredients, Michelin-starred expertise, and an exquisite dark luxury atmosphere. Book your table tonight.">
+    <meta name="keywords" content="fine dining, luxury restaurant, reservation, gourmet chef, steak house, truffle pasta, organic ingredients">
+    <meta name="author" content="Aurelia Restaurant Group">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- FontAwesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body id="home">
+
+    <!-- 1. NAVIGATION HEADER -->
+    <header class="header">
+        <div class="container">
+            <a href="#home" class="logo">Aurelia<span>.</span></a>
+            
+            <nav class="nav-bar">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-btn">
+                <a href="#reservation" class="btn btn-primary">Book a Table</a>
+            </div>
+            
+            <button class="menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-subtitle">Exquisite Culinary Artistry</span>
+                <h1 class="hero-title">Experience Fine Dining Like Never Before</h1>
+                <p class="hero-desc">Immerse your senses in a symphony of premium seasonal ingredients, handcrafted by master chefs and served in an elegant, candlelit atmosphere.</p>
+                <div class="hero-btns">
+                    <a href="#menu" class="btn btn-primary">View Menu</a>
+                    <a href="#reservation" class="btn btn-secondary">Book a Table</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <main>
+        
+        <!-- 3. ABOUT US SECTION -->
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="about-grid">
+                    
+                    <div class="about-content-wrapper reveal">
+                        <span class="section-subtitle">Our Heritage</span>
+                        <h2 class="section-title" style="text-align: left; margin-left: 0;">A Story of Taste, Craft & Elegance</h2>
+                        <p class="about-text">Founded on a passion for outstanding gastronomy, Aurelia is a haven of luxury fine dining. We blend time-honored traditional techniques with modern culinary innovation to present dishes that are visual masterpieces and sensory revelations.</p>
+                        
+                        <div class="about-highlights">
+                            <div class="about-highlight-item">
+                                <div class="about-highlight-icon">
+                                    <i class="fa-solid fa-utensils"></i>
+                                </div>
+                                <div class="about-highlight-content">
+                                    <h3 class="about-highlight-title">Artisan Culinary Curation</h3>
+                                    <p class="about-highlight-desc">Every menu detail is meticulously crafted by our executive chefs, creating balanced, memorable profiles.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="about-highlight-item">
+                                <div class="about-highlight-icon">
+                                    <i class="fa-solid fa-seedling"></i>
+                                </div>
+                                <div class="about-highlight-content">
+                                    <h3 class="about-highlight-title">100% Organic & Sourced Locally</h3>
+                                    <p class="about-highlight-desc">We partner directly with sustainable micro-farms and local fisheries to guarantee unmatched daily freshness.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#menu" class="btn btn-primary">Discover Our Journey</a>
+                    </div>
+                    
+                    <div class="about-image-wrapper reveal delay-200">
+                        <div class="about-image-card">
+                            <img src="assets/images/about_chef.png" alt="Executive Chef plating gourmet food">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. FEATURED DISHES SECTION -->
+        <section id="menu" class="section menu">
+            <div class="container">
+                
+                <div class="section-header reveal">
+                    <span class="section-subtitle">Gastronomic Selection</span>
+                    <h2 class="section-title">Our Featured Masterpieces</h2>
+                </div>
+                
+                <!-- Menu Tabs -->
+                <div class="menu-tabs reveal delay-100">
+                    <button class="menu-tab-btn active" data-filter="all">All Dishes</button>
+                    <button class="menu-tab-btn" data-filter="starter">Starters</button>
+                    <button class="menu-tab-btn" data-filter="main">Main Courses</button>
+                    <button class="menu-tab-btn" data-filter="dessert">Desserts & Drinks</button>
+                </div>
+                
+                <!-- Menu Grid (6 Dishes) -->
+                <div class="menu-grid reveal delay-200">
+                    
+                    <!-- Card 1 (Truffle Pasta) -->
+                    <div class="menu-card" data-category="main">
+                        <div class="menu-img-container">
+                            <span class="menu-tag">Signature</span>
+                            <img src="assets/images/truffle_pasta.png" alt="Black Truffle Tagliatelle">
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Truffle Tagliatelle</h3>
+                                <span class="menu-card-price">$38</span>
+                            </div>
+                            <p class="menu-card-desc">Handmade egg tagliatelle tossed in a rich butter emulsion, topped with generous shavings of Umbrian black winter truffles.</p>
+                            <div class="menu-card-footer">
+                                <div class="menu-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <a href="#reservation" class="menu-order-btn">Book Table <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2 (Ribeye Steak) -->
+                    <div class="menu-card" data-category="main">
+                        <div class="menu-img-container">
+                            <span class="menu-tag">Chef's Choice</span>
+                            <img src="assets/images/ribeye_steak.png" alt="Aged Ribeye Steak">
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Dry-Aged Ribeye</h3>
+                                <span class="menu-card-price">$54</span>
+                            </div>
+                            <p class="menu-card-desc">45-day dry-aged Prime Angus ribeye steak, seared with garlic cloves, rosemary sprigs, served with red wine reduction jus.</p>
+                            <div class="menu-card-footer">
+                                <div class="menu-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <a href="#reservation" class="menu-order-btn">Book Table <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3 (Seared Scallops) -->
+                    <div class="menu-card" data-category="starter">
+                        <div class="menu-img-container">
+                            <img src="assets/images/seared_scallops.png" alt="Pan-Seared Scallops">
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Seared Scallops</h3>
+                                <span class="menu-card-price">$29</span>
+                            </div>
+                            <p class="menu-card-desc">Pan-seared Atlantic scallops with golden crust, nested on a vibrant green sweet pea purée and decorated with micro herbs.</p>
+                            <div class="menu-card-footer">
+                                <div class="menu-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                                <a href="#reservation" class="menu-order-btn">Book Table <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 4 (Poached Lobster Tail) -->
+                    <div class="menu-card" data-category="main">
+                        <div class="menu-img-container">
+                            <img src="assets/images/lobster_tail.png" alt="Poached Lobster Tail">
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Saffron Lobster</h3>
+                                <span class="menu-card-price">$62</span>
+                            </div>
+                            <p class="menu-card-desc">Butter-poached lobster tail served in its shell with a fragrant saffron lemon butter sauce and organic garlic shoots.</p>
+                            <div class="menu-card-footer">
+                                <div class="menu-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <a href="#reservation" class="menu-order-btn">Book Table <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 5 (Chocolate Fondant - Unsplash) -->
+                    <div class="menu-card" data-category="dessert">
+                        <div class="menu-img-container">
+                            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=600&auto=format&fit=crop" alt="Chocolate Lava Fondant">
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Chocolate Fondant</h3>
+                                <span class="menu-card-price">$18</span>
+                            </div>
+                            <p class="menu-card-desc">Decadent molten dark chocolate lava cake, served hot with raspberry coulis and a scoop of organic vanilla bean ice cream.</p>
+                            <div class="menu-card-footer">
+                                <div class="menu-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <a href="#reservation" class="menu-order-btn">Book Table <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 6 (Botanical Cocktail - Unsplash) -->
+                    <div class="menu-card" data-category="dessert">
+                        <div class="menu-img-container">
+                            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=600&auto=format&fit=crop" alt="Signature Smoked Cocktail">
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">The Aurelia Gold</h3>
+                                <span class="menu-card-price">$22</span>
+                            </div>
+                            <p class="menu-card-desc">A smoked bourbon craft cocktail infused with honey syrup, bitters, botanical orange peel, and gold dust flakes.</p>
+                            <div class="menu-card-footer">
+                                <div class="menu-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                                <a href="#reservation" class="menu-order-btn">Book Table <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. WHY CHOOSE US SECTION -->
+        <section class="section features">
+            <div class="container">
+                
+                <div class="section-header reveal">
+                    <span class="section-subtitle">Excellence Defined</span>
+                    <h2 class="section-title">The Aurelia Experience</h2>
+                </div>
+                
+                <div class="features-grid">
+                    
+                    <!-- Card 1 (Fresh Ingredients) -->
+                    <div class="feature-card reveal">
+                        <div class="feature-icon-wrapper">
+                            <!-- Custom SVG for fresh ingredients -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                        </div>
+                        <h3 class="feature-title">Fresh Ingredients</h3>
+                        <p class="feature-desc">Locally harvested daily harvests, organic greens, and fresh catches brought from docks directly to our luxury kitchen pantry.</p>
+                    </div>
+                    
+                    <!-- Card 2 (Expert Chefs) -->
+                    <div class="feature-card reveal delay-100">
+                        <div class="feature-icon-wrapper">
+                            <!-- Custom SVG for Chef -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l2.79-2.79C10.09 18.64 11.02 19 12 19c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+                        </div>
+                        <h3 class="feature-title">Expert Chefs</h3>
+                        <p class="feature-desc">Our culinary wizards hold decades of training in Michelin-level restaurants around the globe, pushing flavor limits.</p>
+                    </div>
+                    
+                    <!-- Card 3 (Fast Service) -->
+                    <div class="feature-card reveal delay-200">
+                        <div class="feature-icon-wrapper">
+                            <!-- Custom SVG for Fast Service -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.38 8.57l-1.23 1.85a8 8 0 0 1-.22 7.58H5.07A8 8 0 0 1 15.58 6.85l1.85-1.23A10 10 0 0 0 3.35 18a2 2 0 0 0 1.72 1h13.86a2 2 0 0 0 1.72-1 10 10 0 0 0-.27-9.43zM12 8a4 4 0 0 0-4 4h2a2 2 0 0 1 2-2V8zm8.6-4.6c-.39-.39-1.02-.39-1.41 0l-5.66 5.66a1 1 0 0 0 0 1.41l.71.71a1 1 0 0 0 1.41 0l5.66-5.66a1 1 0 0 0 0-1.41z"/></svg>
+                        </div>
+                        <h3 class="feature-title">Attentive Service</h3>
+                        <p class="feature-desc">Flawlessly timed service, dedicated table sommeliers, and hospitality focused entirely on anticipating your needs.</p>
+                    </div>
+                    
+                    <!-- Card 4 (Premium Experience) -->
+                    <div class="feature-card reveal delay-300">
+                        <div class="feature-icon-wrapper">
+                            <!-- Custom SVG for Premium Experience -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </div>
+                        <h3 class="feature-title">Premium Dining</h3>
+                        <p class="feature-desc">A custom lighting landscape, live acoustic piano backdrops, and velvet furnishings crafted for intimate comfort.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CUSTOMER TESTIMONIALS SECTION -->
+        <section id="reviews" class="section testimonials">
+            <div class="container">
+                
+                <div class="section-header reveal">
+                    <span class="section-subtitle">Guest Diaries</span>
+                    <h2 class="section-title">What Our Patrons Say</h2>
+                </div>
+                
+                <div class="testimonials-grid">
+                    
+                    <!-- Testimonial 1 -->
+                    <div class="reveal testimonial-card">
+                        <span class="quote-icon">“</span>
+                        <div class="rating-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Dining here was absolute perfection. The black truffle pasta was creamy, light, and intensely aromatic. The attention to detail from the staff made our anniversary truly unforgettable."</p>
+                        <div class="testimonial-user">
+                            <div class="user-avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop" alt="Sarah Jenkins">
+                            </div>
+                            <div class="user-info">
+                                <h4>Sarah Jenkins</h4>
+                                <p>Gourmet Critic</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="reveal testimonial-card delay-100">
+                        <span class="quote-icon">“</span>
+                        <div class="rating-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"As a steak lover, I'm extremely picky. The dry-aged Prime Angus ribeye at Aurelia was crusty on the outside, tender inside, and packed with complex umami profiles. Exquisite!"</p>
+                        <div class="testimonial-user">
+                            <div class="user-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop" alt="David Chen">
+                            </div>
+                            <div class="user-info">
+                                <h4>David Chen</h4>
+                                <p>Wine Enthusiast</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="reveal testimonial-card delay-200">
+                        <span class="quote-icon">“</span>
+                        <div class="rating-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The atmosphere is magical. The dim lighting, dark wood details, gold accents, and live jazz created a luxurious oasis. Highly recommend the signature smoked gold cocktail."</p>
+                        <div class="testimonial-user">
+                            <div class="user-avatar">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop" alt="Elena Rostova">
+                            </div>
+                            <div class="user-info">
+                                <h4>Elena Rostova</h4>
+                                <p>Lifestyle Journalist</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. RESERVATION SECTION -->
+        <section id="reservation" class="section reservation">
+            <div class="container">
+                <div class="reservation-layout reveal">
+                    
+                    <!-- Left: Details -->
+                    <div class="reservation-info-pane">
+                        <h2 class="res-info-title">Secure Your Culinary Seat</h2>
+                        <p class="res-info-text">Due to our highly curated dining landscape, we recommend placing bookings at least two weeks in advance. For parties larger than 8, contact our private events director.</p>
+                        
+                        <div class="res-details">
+                            <div class="res-detail-item">
+                                <div class="res-detail-icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <span class="res-detail-label">Reservation Direct Line</span>
+                                    <p class="res-detail-val">+1 (555) 782-9011</p>
+                                </div>
+                            </div>
+                            
+                            <div class="res-detail-item">
+                                <div class="res-detail-icon">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <span class="res-detail-label">Dinner Service Hours</span>
+                                    <p class="res-detail-val">Tue - Sun: 5:00 PM - 11:30 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right: Form -->
+                    <div class="reservation-form-pane">
+                        <form id="bookingForm" class="booking-form" novalidate>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="resName" class="form-label">Full Name</label>
+                                    <input type="text" id="resName" class="form-input" placeholder="e.g., John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="resEmail" class="form-label">Email Address</label>
+                                    <input type="email" id="resEmail" class="form-input" placeholder="e.g., john@example.com">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="resPhone" class="form-label">Phone Number</label>
+                                    <input type="tel" id="resPhone" class="form-input" placeholder="e.g., 555-019-2834">
+                                </div>
+                                <div class="form-group">
+                                    <label for="resGuests" class="form-label">Number of Guests</label>
+                                    <select id="resGuests" class="form-input">
+                                        <option value="" disabled selected>Select guests count</option>
+                                        <option value="1">1 Guest</option>
+                                        <option value="2">2 Guests</option>
+                                        <option value="3">3 Guests</option>
+                                        <option value="4">4 Guests</option>
+                                        <option value="5">5 Guests</option>
+                                        <option value="6">6 Guests</option>
+                                        <option value="7">7 Guests</option>
+                                        <option value="8">8 Guests (Large Group)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="resDate" class="form-label">Date</label>
+                                    <input type="date" id="resDate" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="resTime" class="form-label">Time</label>
+                                    <select id="resTime" class="form-input">
+                                        <option value="" disabled selected>Select sitting time</option>
+                                        <option value="5:00 PM">5:00 PM</option>
+                                        <option value="5:30 PM">5:30 PM</option>
+                                        <option value="6:00 PM">6:00 PM</option>
+                                        <option value="6:30 PM">6:30 PM</option>
+                                        <option value="7:00 PM">7:00 PM</option>
+                                        <option value="7:30 PM">7:30 PM</option>
+                                        <option value="8:00 PM">8:00 PM</option>
+                                        <option value="8:30 PM">8:30 PM</option>
+                                        <option value="9:00 PM">9:00 PM</option>
+                                        <option value="9:30 PM">9:30 PM</option>
+                                        <option value="10:00 PM">10:00 PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Book Table Now</button>
+                            
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CONTACT SECTION -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                
+                <div class="section-header reveal">
+                    <span class="section-subtitle">Locate Us</span>
+                    <h2 class="section-title">Hours & Directional Map</h2>
+                </div>
+                
+                <div class="contact-layout">
+                    
+                    <div class="contact-card-wrapper reveal">
+                        <!-- Address Card -->
+                        <div class="contact-info-card">
+                            <div class="contact-card-icon">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Our Location</h4>
+                                <p>180 Gilded Promenade Blvd, Suite 400<br>Central Manhattan, New York, NY 10019</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Phone Card -->
+                        <div class="contact-info-card">
+                            <div class="contact-card-icon">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Direct Contacts</h4>
+                                <p>Reception: +1 (555) 782-9011<br>Office/PR: +1 (555) 782-9020</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Email Card -->
+                        <div class="contact-info-card">
+                            <div class="contact-card-icon">
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Electronic Enquiries</h4>
+                                <p>Bookings: host@aurelia.com<br>Press: relations@aurelia.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Google Maps Placeholder Container -->
+                    <div class="map-container reveal delay-200">
+                        <div class="map-placeholder">
+                            <div class="map-placeholder-icon">
+                                <i class="fa-solid fa-compass-drafting"></i>
+                            </div>
+                            <h3 class="map-placeholder-title">Interactive Map</h3>
+                            <p class="map-placeholder-desc">180 Gilded Promenade Blvd, Central Manhattan, New York. Click to open coordinates on external maps.</p>
+                            <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-secondary">Launch Directions</a>
+                            
+                            <!-- SVG Map Background Grid -->
+                            <svg class="map-bg-grid" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <defs>
+                                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#d4af37" stroke-width="0.3"/>
+                                    </pattern>
+                                </defs>
+                                <rect width="100%" height="100%" fill="url(#grid)" />
+                            </svg>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 9. FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-brand">
+                    <a href="#home" class="logo" style="display:inline-block; margin-bottom: 20px;">Aurelia<span>.</span></a>
+                    <p class="footer-desc">An exceptional destination for fine dining, blending luxury elements, ambient jazz, and unmatched seasonal cuisine in a dark romantic landscape.</p>
+                    <div class="footer-socials">
+                        <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://tripadvisor.com" target="_blank" rel="noopener" class="social-link" aria-label="Tripadvisor"><i class="fa-brands fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="footer-title">Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home" class="footer-link">Home</a></li>
+                        <li><a href="#about" class="footer-link">About Us</a></li>
+                        <li><a href="#menu" class="footer-link">Gastronomy Menu</a></li>
+                        <li><a href="#reviews" class="footer-link">Guest Diaries</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-title">Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+                        <li><a href="#" class="footer-link">Cookie Preferences</a></li>
+                        <li><a href="#" class="footer-link">Allergen Notice</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3 class="footer-title">The Aurelia Club</h3>
+                    <p>Subscribe to receive exclusive recipes, culinary updates, and early bookings access.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Aurelia Club!');">
+                        <input type="email" class="newsletter-input" placeholder="Your email address" required aria-label="Newsletter email">
+                        <button type="submit" class="newsletter-btn">Join</button>
+                    </form>
+                </div>
+                
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aurelia Dining Group. All rights reserved.</p>
+                <p>Designed with luxury standards for fine dining.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 10. SUCCESS MODAL DIALOG -->
+    <div id="successModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="modal-title">Table Reserved!</h3>
+            <p id="modalSummaryText" class="modal-text">Your booking details have been validated. We look forward to hosting you soon.</p>
+            <button id="closeModalBtn" class="btn btn-primary">Fabulous</button>
+        </div>
+    </div>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+</html>
